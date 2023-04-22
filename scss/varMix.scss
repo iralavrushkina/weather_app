@@ -1,0 +1,15 @@
+$blue:  #4198e9;
+$black: #000;
+$grey: #ccc;
+$white: #fff;
+$darkGrey:#2d2c2c;
+$red: red;
+
+@mixin size ($w,$h){
+    width:$w;
+    height: $h;
+}
+@mixin fontStyle ($s,$w){
+    font-size: $s;
+    font-weight: $w;
+}

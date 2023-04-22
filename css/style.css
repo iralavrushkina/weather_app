@@ -1,0 +1,219 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #4198e9;
+  font-family: Helvetica, sans-serif;
+}
+
+.container {
+  width: 350px;
+  height: 700px;
+  margin: 0 auto;
+  padding: 30px 10px;
+}
+
+.request {
+  position: relative;
+  width: 100%;
+}
+.request__input {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 0 5px;
+}
+.request__btn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+.request__inputVal {
+  color: #000;
+  font-weight: 700;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #ccc;
+  border-radius: 50%;
+}
+.btn:after, .btn:before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background-color: #2d2c2c;
+  position: absolute;
+}
+.btn:after {
+  rotate: 45deg;
+  bottom: 2px;
+  left: 9px;
+}
+.btn:before {
+  rotate: -45deg;
+  bottom: 2px;
+  right: 10px;
+}
+
+.weather {
+  margin: 30px 0 0;
+  width: 100%;
+  min-height: 400px;
+  border-radius: 5px;
+  display: none;
+}
+.weather__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  width: 100%;
+  min-height: 150px;
+  padding: 15px;
+  background-color: #000;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.weather__temp {
+  margin: 0 0 10px;
+  font-size: 40px;
+  font-weight: 700;
+  display: block;
+}
+.weather__feel {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+}
+.weather__type {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+}
+.weather__location, .weather__temp_day {
+  font-size: 14px;
+  font-weight: 400;
+}
+.weather__days {
+  background-color: #2d2c2c;
+  width: 100%;
+  min-height: 400px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: white;
+  padding: 15px;
+}
+.weather__day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0 0;
+}
+.weather__day_name {
+  text-transform: uppercase;
+  font-size: 21px;
+  font-weight: 700;
+}
+.weather__icon_day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 180px;
+          flex: 0 0 180px;
+}
+.weather__type_day {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 0 20px;
+}
+
+.active {
+  display: block;
+}
+
+.border-red {
+  border-color: red;
+}

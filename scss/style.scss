@@ -1,0 +1,131 @@
+@import "reset.scss";
+@import "varMix.scss";
+
+body{
+    background-color:$blue;
+    font-family: Helvetica, sans-serif;
+}
+.container{
+    @include size(350px,700px);
+    margin: 0 auto;
+    padding: 30px 10px;
+}
+.request{
+    position: relative;
+    width: 100%;
+    &__input{
+        display: block;
+        width: 100%;
+        min-height: 30px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin: 0 0 5px;
+    }
+    &__btn{
+        position: absolute;
+        right: 10px;
+        top: 5px;
+    }
+    &__inputVal{
+        color:$black;
+        font-weight: 700;
+    }
+}
+.btn{
+    @include size(20px,20px);
+    background:none;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background-color: $grey;
+        border-radius: 50%;
+    }
+    &:after,
+    &:before{
+       content: "";
+       @include size(1px,15px);
+       background-color: $darkGrey;
+       position: absolute;
+    }
+    &:after{
+        rotate: 45deg;
+        bottom:2px;
+        left:9px;
+    }
+    &:before{
+        rotate: -45deg;
+        bottom:2px;
+        right: 10px;
+    }
+}
+.weather{
+   margin: 30px 0 0;
+   width: 100%;
+   min-height: 400px;
+   border-radius: 5px; 
+   display: none;
+   &__top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $white;
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    background-color:$black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+   }
+   &__temp{
+    margin: 0 0 10px;
+    @include fontStyle(40px,700);
+    display: block;
+   }
+   &__feel{
+    @include fontStyle(14px,400);
+    display: block;
+   }
+   &__type{
+    margin: 0 0 5px;
+    @include fontStyle(16px,700);
+    display: block;
+   }
+   &__location,
+   &__temp_day{
+    @include fontStyle(14px,400);
+   }
+   &__days{
+    background-color: $darkGrey;
+    width: 100%;
+    min-height: 400px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    padding:15px;
+   }
+   &__day{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 0;
+   }
+   &__day_name{
+    text-transform: uppercase;
+    @include fontStyle(21px,700);
+   }
+   &__icon_day{
+    display: flex;
+    align-items: center;
+    flex:0 0 180px;
+   }
+   &__type_day{
+    @include fontStyle(14px,400);
+    margin: 0 0 0 20px;
+   }
+}
+.active{
+    display:block;
+}
+.border-red{
+    border-color: $red;
+}
